@@ -17,6 +17,7 @@
       body {
         font-family: "Space Grotesk", sans-serif;
       }
+
       .selected {
         border: 1px solid purple;
       }
@@ -26,7 +27,7 @@
   <body>
     <main>
       <section class="container mx-auto my-16 px-4 md:px-2">
-        <div class="grid grid-cols-2">
+        <div class="grid lg:grid-cols-2 md:grid-cols-1">
           <!-- Image -->
           <div class="p-5 border rounded border-gray-200 m-5">
             <div class="h-96 w-full">
@@ -40,12 +41,14 @@
           </div>
           <!-- Options -->
           <div class="mt-10 max-w-lg mx-auto">
-            <span id="desc" class="text-lg text-gray-700"
+            <span id="description" class="text-lg text-gray-700"
               >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum
               beatae laboriosam, commodi quis tempore necessitatibus.
               Voluptatibus minima aut non doloremque?
             </span>
-            <span class="text-2xl font-medium pb-2" id="price">750</span>
+            <button class="text-4xl font-medium pb-2 block mt-4">
+              $<span id="price">750</span>
+            </button>
             <div class="pt-10">
               <button
                 class="
@@ -67,12 +70,13 @@
                   shadow
                   hover:shadow-lg
                   rounded
+                  ml-8
                 "
               >
                 Express Shipping - 30$
               </button>
             </div>
-            <div class="flex justify-between items-center mt-40">
+            <div class="grid md:grid-cols-4 grid-cols-2 gap-4 mt-40">
               <!-- first image -->
               <div
                 class="
@@ -82,10 +86,16 @@
                   cursor-pointer
                   hover:border-purple-600 hover:shadow-lg
                   rounded
+                  flex
+                  justify-center
                 "
                 id="first"
               >
-                <img src="images/1.jpg" class="w-20 rouded h-20" alt="" />
+                <img
+                  src="images/1.jpg"
+                  class="w-20 rouded h-20 object-cover"
+                  alt="image-1"
+                />
               </div>
               <!-- second image -->
               <div
@@ -96,10 +106,16 @@
                   cursor-pointer
                   hover:border-purple-600
                   rounded
+                  flex
+                  justify-center
                 "
                 id="second"
               >
-                <img src="images/2.jpg" class="w-20 rounded h-20" alt="" />
+                <img
+                  src="images/2.jpg"
+                  class="w-20 rounded h-20 object-cover"
+                  alt="image-2"
+                />
               </div>
               <!-- third image -->
               <div
@@ -110,10 +126,16 @@
                   cursor-pointer
                   hover:border-purple-600
                   rounded
+                  flex
+                  justify-center
                 "
                 id="third"
               >
-                <img src="images/3.jpg" class="w-20 rounded h-20" alt="" />
+                <img
+                  src="images/3.jpg"
+                  class="w-20 rounded h-20 object-cover"
+                  alt="image-3"
+                />
               </div>
               <!-- fourth image -->
               <div
@@ -124,15 +146,21 @@
                   cursor-pointer
                   hover:border-purple-600
                   rounded
+                  flex
+                  justify-center
                 "
                 id="fourth"
               >
-                <img src="images/4.jpg" class="w-20 rounded h-20" alt="" />
+                <img
+                  src="images/4.jpg"
+                  class="w-20 rounded h-20 object-cover"
+                  alt="image-4"
+                />
               </div>
             </div>
 
             <div class="text-2xl py-2">
-              Shipping Charge: <span id="shipping">0</span>$
+              Shipping Charge: <span id="shipping">5</span>$
             </div>
             <div class="text-2xl py-2">Total: <span id="total">750</span>$</div>
             <button
